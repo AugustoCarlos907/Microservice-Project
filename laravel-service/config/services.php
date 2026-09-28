@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+    'internal' => [
+        // Segredo compartilhado com o serviço Symfony (Orders) para autenticar
+        // chamadas serviço-a-serviço. Ver ServiceAuth middleware.
+        'secret' => env('SERVICE_AUTH_SECRET'),
+    ],
+ 
+    'orders_service' => [
+        'url' => env('ORDERS_SERVICE_URL', 'http://localhost:8000'),
+    ],
 ];
